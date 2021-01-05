@@ -11,9 +11,7 @@ class plane {
   - this is only somewhat necessary, especially in editing. If you wish,
   you may remove the vecList array and replace it with 3 individual PVectors
   - when it comes to texturing, the plane has unique UVs for each point
-  - when the level data is loaded (in load()), the planes that are loaded that 
-  are also 'organic' will be textured according to it's normal
-  - otherwise, the user can manually set the UVs
+  - all of these UVs are pre-generated in another program I use for editing
   */
   int[] vecList;
   //PVector p1, p2, p3;
