@@ -1,5 +1,22 @@
 class plane {
+  /*
+  quick rundown of the plane class:
+  
+  - planes are represented by 3 points. It also contains
+  information for texturing and collision events (such as an AABB)
+  - the vecList array is a short array of 3 integers, which refers
+  to the PVectors stored in the geometryVectors arrayList
+  - so to generate a new plane, you need the indexes of 3 PVectors
+  contained within geometryVectors
+  - this is only somewhat necessary, especially in editing. If you wish,
+  you may remove the vecList array and replace it with 3 individual PVectors
+  - when it comes to texturing, the plane has unique UVs for each point
+  - when the level data is loaded (in load()), the planes that are loaded that 
+  are also 'organic' will be textured according to it's normal
+  - otherwise, the user can manually set the UVs
+  */
   int[] vecList;
+  //PVector p1, p2, p3;
   PVector norm, min, max;
   byte type = 0;
   int texture = 0;
