@@ -1,4 +1,13 @@
 class characterBase {
+  /* basic rundown of characterBase
+  - the characterBase primarily interacts with planes
+  and other characterBases
+  - it also contains information for movement, collisions, combat (health, team)
+  - moveAngle determines the direction the player will move
+  - faceAngle determines the 'facing' direction, independant of movement
+  - usually for basic AI, they are both the same thing.
+  */
+  
   //this is just so I don't have to call "things.indexOf()"
   //very often inside the quadtree
   int val = -1;
@@ -9,7 +18,9 @@ class characterBase {
   float speed = 0, moveSpeed = 1.85;
   int maxHealth = 100, health = maxHealth;
   float r = 4.0, h = 32.0;
+  //time between bullets
   int shootTimer = 0;
+  //timer to time footstep sounds
   int walkTimer = 0;
   //timer to delay health regeneration
   int damage = 0;
